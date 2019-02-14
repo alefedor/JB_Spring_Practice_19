@@ -1,13 +1,14 @@
 package dijkstra
 
 import java.util.*
+import java.util.concurrent.atomic.AtomicInteger
 import kotlin.collections.ArrayList
 
 class Node {
     private val _outgoingEdges = arrayListOf<Edge>()
     val outgoingEdges: List<Edge> = _outgoingEdges
 
-    var distance = Integer.MAX_VALUE // USE ME FOR THE DIJKSTRA ALGORITHM!
+    var distance = AtomicInteger(Integer.MAX_VALUE)
 
     fun addEdge(edge: Edge) {
         _outgoingEdges.add(edge)
@@ -48,5 +49,5 @@ fun randomConnectedGraph(nodes: Int, edges: Int, maxWeight: Int = 100): List<Nod
 }
 
 fun clearNodes(nodes: List<Node>) {
-    nodes.forEach { it.distance = Int.MAX_VALUE }
+    nodes.forEach { it.distance.set(Int.MAX_VALUE) }
 }

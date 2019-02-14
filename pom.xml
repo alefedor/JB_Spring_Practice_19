@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.jetbrains.koval.spring_practice</groupId>
+    <groupId>ru.jetbrains.koval.spring_practice</groupId>
     <artifactId>dijkstra</artifactId>
     <version>2019</version>
     <packaging>jar</packaging>
@@ -29,11 +29,6 @@
             <artifactId>kotlin-test</artifactId>
             <version>${kotlin.version}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-core</artifactId>
-            <version>1.0.1</version>
         </dependency>
     </dependencies>
 
